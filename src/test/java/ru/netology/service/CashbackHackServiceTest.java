@@ -19,10 +19,10 @@ public class CashbackHackServiceTest {
     @Test
     void shouldRemain0() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 900;
+        int amount = 999;
 
         int actual = service.remain(amount);
-        int expected = 100;
+        int expected = 1;
 
         assertEquals(actual, expected);
     }
@@ -30,10 +30,10 @@ public class CashbackHackServiceTest {
     @Test
     void shouldRemain1() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 1100;
+        int amount = 600;
 
         int actual = service.remain(amount);
-        int expected = 900;
+        int expected = 400;
 
         assertEquals(actual, expected);
     }
@@ -50,10 +50,20 @@ public class CashbackHackServiceTest {
     @Test
     void shouldRemain3() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 100;
+        int amount = 1;
 
         int actual = service.remain(amount);
-        int expected = 900;
+        int expected = 999;
+
+        assertEquals(actual, expected);
+    }
+    @Test
+    void shouldRemain4() {
+        CashbackHackService service = new CashbackHackService();
+        int amount = 1128;
+
+        int actual = service.remain(amount);
+        int expected = 872;
 
         assertEquals(actual, expected);
     }
