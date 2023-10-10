@@ -69,7 +69,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-       // @Test
+        @Test
         public  void shouldRemainApi() {
             CashbackHackService service = new CashbackHackService();
             int amount = 1000;
